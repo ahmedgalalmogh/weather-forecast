@@ -75,6 +75,7 @@ const CityDashboard = () => {
                 width={"24"}
                 src={CityInfo.cityWeather.statusImage}
                 height={"24"}
+                style={{ borderRadius: "20px", marginRight: "10px" }}
               />
               <Typography variant='h4'>
                 {CityInfo.cityWeather.weatherStatus}
