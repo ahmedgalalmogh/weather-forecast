@@ -26,7 +26,14 @@ const CitiesList = ({
             onChange={handleSelectChange}>
             {CityInfo?.cities?.map((city: string) => {
               return (
-                <option key={city} style={{ fontSize: "16px" ,color:'inherit'}} value={city}>
+                <option
+                  key={city}
+                  style={{
+                    fontSize: "16px",
+                    color: "inherit",
+                    background: "grey",
+                  }}
+                  value={city}>
                   {city}
                 </option>
               );
