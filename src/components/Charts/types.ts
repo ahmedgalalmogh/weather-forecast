@@ -10,6 +10,7 @@ export type LineChartProps = {
   bottom: number;
   heightProp: number;
   data: LineChartDataType[];
+  isDesktop: boolean;
 };
 export type BarChartDataType = {
   name: string;
@@ -23,4 +24,5 @@ export type BarChartProps = {
   top: number;
   bottom: number;
   data: BarChartDataType[];
+  isDesktop: boolean;
 };

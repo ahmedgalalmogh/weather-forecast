@@ -9,7 +9,7 @@ const HourlyLineChart = ({
   top,
   bottom,
   heightProp,
-  data,
+  data,isDesktop
 }: LineChartProps) => {
   const { DrawLineChart } = useHourlyLineChart({
     widthProp,
@@ -18,13 +18,13 @@ const HourlyLineChart = ({
     top,
     bottom,
     heightProp,
-    data,
+    data,isDesktop
   });
   useEffect(() => {
     if (data) {
       DrawLineChart();
     }
-  }, [data]);
+  }, [data, isDesktop]);
 
 
 

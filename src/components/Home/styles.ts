@@ -25,5 +25,4 @@ export const Select = styled(NativeSelect)(({ theme }) => ({
   },
   color: "#FFFFFF",
   fontSize: "20px",
-  fill: "#white",
 }));

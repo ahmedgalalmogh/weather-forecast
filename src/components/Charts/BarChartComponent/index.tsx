@@ -8,7 +8,7 @@ const UpComingBarChart = ({
   heightProp,
   top,
   bottom,
-  data,
+  data,isDesktop
 }: BarChartProps) => {
  const { DrawBarChart } = useUpcomingBarChart({
    widthProp,
@@ -18,13 +18,15 @@ const UpComingBarChart = ({
    top,
    bottom,
    data,
+   isDesktop,
  });
+  
 
  useEffect(() => {
    if (data) {
      DrawBarChart();
    }
- }, [data]);
+ }, [data,isDesktop]);
   return <div style={{ display: "flex" }} className='basicBarChart' />;
 };
 
