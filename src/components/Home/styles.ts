@@ -23,6 +23,5 @@ export const Select = styled(NativeSelect)(({ theme }) => ({
   "&:after": {
     borderColor: "#FFFFFF",
   },
-  color: "#FFFFFF",
   fontSize: "20px",
 }));
