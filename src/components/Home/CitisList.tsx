@@ -30,8 +30,7 @@ const CitiesList = ({
                   key={city}
                   style={{
                     fontSize: "16px",
-                    color: "inherit",
-                    background: "grey",
+                    color: "black",
                   }}
                   value={city}>
                   {city}
