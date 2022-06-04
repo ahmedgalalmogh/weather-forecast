@@ -4,7 +4,7 @@ import countries from "all-countries-and-cities-json";
 // ----------------------------------------------------------------------
 import { Location, RequestType } from "../shared/types";
 const RootBath =
-  "http://api.worldweatheronline.com/premium/v1/weather.ashx?key=6cf10a6bb13f4d0788f112958222705";
+  "https://api.worldweatheronline.com/premium/v1/weather.ashx?key=6cf10a6bb13f4d0788f112958222705";
 const axiosInstance = axios.create();
 axiosInstance.defaults.headers.common.Accept = "*/*";
 axiosInstance.defaults.headers.common["Content-Type"] = "application/json";
