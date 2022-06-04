@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import ThemeProvider from "./theme/index";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import NotFound from "./components/shared/NotFound";
+import Layout from "./components/shared/Layout";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+import CityDashboard from "./components/CityDashboard";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <ThemeProvider>
+        <BrowserRouter>
+          <Layout>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/city-dashboard' element={<CityDashboard />} />
+              <Route path='*' element={<NotFound />} />
+            </Routes>
+          </Layout>
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
   );
 }
 
