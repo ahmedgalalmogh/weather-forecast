@@ -95,6 +95,7 @@ const CityDashboard = () => {
             <Stack direction={"row"} justifyContent={"center"} spacing={4}>
               <HourlyChart
                 top={10}
+                isDesktop={isDesktop}
                 right={isDesktop ? 50 : 30}
                 bottom={isDesktop ? 50 : 30}
                 left={isDesktop ? 50 : 30}
@@ -247,6 +248,7 @@ const CityDashboard = () => {
                   top={isDesktop ? 50 : 25}
                   bottom={isDesktop ? 50 : 25}
                   data={barChartData}
+                  isDesktop={isDesktop}
                 />
               </Stack>
             </Card>
